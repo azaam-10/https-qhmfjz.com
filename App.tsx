@@ -7,7 +7,7 @@ import BottomNav from './components/BottomNav';
 import MultiStepModal from './components/MultiStepModal';
 
 const App: React.FC = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal] = useState(true);
 
   return (
     <div className="flex justify-center bg-gray-100 min-h-screen">
@@ -33,7 +33,7 @@ const App: React.FC = () => {
 
         {/* Multi-Step Modal */}
         {showModal && (
-          <MultiStepModal onClose={() => setShowModal(false)} />
+          <MultiStepModal />
         )}
       </div>
     </div>

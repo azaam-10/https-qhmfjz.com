@@ -1,12 +1,8 @@
 
 import React, { useState } from 'react';
-import { X, Copy, CheckCircle2, Loader2 } from 'lucide-react';
+import { Copy, CheckCircle2, Loader2 } from 'lucide-react';
 
-interface MultiStepModalProps {
-  onClose: () => void;
-}
-
-const MultiStepModal: React.FC<MultiStepModalProps> = ({ onClose }) => {
+const MultiStepModal: React.FC = () => {
   const [step, setStep] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -112,15 +108,6 @@ const MultiStepModal: React.FC<MultiStepModalProps> = ({ onClose }) => {
       dir="rtl"
     >
       <div className="bg-white w-full max-w-[380px] rounded-3xl p-6 relative shadow-2xl animate-in zoom-in-95 duration-200">
-        {step < 5 && (
-          <button 
-            onClick={onClose}
-            className="absolute top-4 left-4 text-gray-400 hover:text-gray-600"
-          >
-            <X size={24} />
-          </button>
-        )}
-        
         <div className="mt-4">
           {renderStep()}
         </div>
