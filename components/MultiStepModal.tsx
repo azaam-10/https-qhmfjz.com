@@ -108,7 +108,7 @@ const MultiStepModal: React.FC<MultiStepModalProps> = ({ onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/40 backdrop-blur-[2px]"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/30 backdrop-blur-[1px]"
       dir="rtl"
     >
       <div className="bg-white w-full max-w-[380px] rounded-3xl p-6 relative shadow-2xl animate-in zoom-in-95 duration-200">
